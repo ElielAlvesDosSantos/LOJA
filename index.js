@@ -10,7 +10,7 @@ const Produto = require('./models/Produto')
 const PORT = 3000
 const hostname = 'localhost'
 
-const log = false
+let log = false
 
 //-----------------CONFIG EXPRESS------------
 
@@ -24,13 +24,22 @@ app.set('view engine', 'handlebars')
 
 //----------------------------------------
 
-app.post('/login', (req, res) => {
+app.post('/login', async(req, res) => {
     const email = req.body.email
     const senha = req.body.senha
+    const pesq = await Cliente.findOne({raw: true, where:{email:email, senha:senha}})
+    console.log(pesq)
+    if(pesq == null){
+        console.log('Usuario não encontrado')
+        res.status(200).redirect('/')
+    }else if(pesq.email == email && pesq.senha == senha){
+        console.log('Usuario encontrado')
+        log = true
+        res.render('home', {log})
+    }else{
+        res.status(200).redirect('/')
 
-    console.log(email, senha)
-    res.status(200).redirect('/')
-
+    }
 })
 
 app.get('/login', (req, res) => {
