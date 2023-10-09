@@ -8,6 +8,9 @@ const Cliente = db.define('cliente', {
     email:{
         type: DataTypes.STRING(30)
     },
+    senha: {
+        type: DataTypes.STRING(30)
+    },
     idade:{
         type: DataTypes.INTEGER
     }

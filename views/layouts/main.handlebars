@@ -8,19 +8,23 @@
     <title>Principal</title>
 </head>
 <body>
+    {{#if log}}
     <header>
         <nav>
-            <a href="http:/">Home</a>
+            <a href="/">Home</a>
         </nav>
     </header>
+    {{else}}
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+    {{/if}}
     <main>
             {{{body}}}
-
-
     </main>
-    <footer>
-        
-    </footer>
-    
+    <footer></footer>
 </body>
 </html>

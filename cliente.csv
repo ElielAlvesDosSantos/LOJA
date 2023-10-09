@@ -1,6 +1,6 @@
-id;nome;email;idade
-1;eliel;eliel@gmail.com;22
-2;alves;alves@gmail.com;12
-3;ronaldo;ronaldo@gmail.com;32
-4;luiz;luiz@gmail.com;42
-5;pedro;pedro@gmail.com;52
+id;nome;email;senha;idade
+1;eliel;eliel@gmail.com;123;22
+2;alves;alves@gmail.com;123;12
+3;ronaldo;ronaldo@gmail.com;123;32
+4;luiz;luiz@gmail.com;123;42
+5;pedro;pedro@gmail.com;123;52
