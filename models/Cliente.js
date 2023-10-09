@@ -5,16 +5,16 @@ const Cliente = db.define('cliente', {
     nome: {
         type: DataTypes.STRING(50)
     },
-    email:{
+    email: {
         type: DataTypes.STRING(30)
     },
     senha: {
         type: DataTypes.STRING(30)
     },
-    idade:{
+    idade: {
         type: DataTypes.INTEGER
     }
-},{
+}, {
     createdAt: false,
     updatedAt: false
 })

@@ -10,7 +10,8 @@ body {
 /* Estilo do cabeçalho */
 header {
     background-color: #000;
-    color: #ffd700; /* Dourado */
+    color: #ffd700;
+    /* Dourado */
     padding: 20px 0;
     text-align: center;
 }
@@ -22,7 +23,8 @@ h1 {
 /* Estilo da navegação */
 nav {
     background-color: #000;
-    color: #ffd700; /* Dourado */
+    color: #ffd700;
+    /* Dourado */
     text-align: center;
     padding: 10px;
 }
@@ -40,7 +42,8 @@ nav li {
 /* Estilo dos produtos */
 .product {
     background-color: #000;
-    border: 1px solid #ffd700; /* Dourado */
+    border: 1px solid #ffd700;
+    /* Dourado */
     padding: 20px;
     margin: 20px;
     text-align: center;
@@ -53,7 +56,8 @@ nav li {
 /* Estilo do rodapé */
 footer {
     background-color: #000;
-    color: #ffd700; /* Dourado */
+    color: #ffd700;
+    /* Dourado */
     text-align: center;
     padding: 10px 0;
 }

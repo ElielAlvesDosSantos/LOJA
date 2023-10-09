@@ -1,17 +1,17 @@
 const { DataTypes } = require('sequelize')
 const db = require('../db/conn')
 const Cliente = require('./Cliente')
-const Produto = db.define('produto',{
-    nome:{
+const Produto = db.define('produto', {
+    nome: {
         type: DataTypes.STRING(30)
     },
-    quantidade:{
+    quantidade: {
         type: DataTypes.INTEGER
     },
-    preço:{
+    preço: {
         type: DataTypes.FLOAT
     }
-},{
+}, {
     createdAt: false,
     updatedAt: false
 })

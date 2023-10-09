@@ -14,17 +14,17 @@ const log = false
 
 //-----------------CONFIG EXPRESS------------
 
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('public'))
 
 //----------------HANDLEBARS------------
-app.engine('handlebars',exphbs.engine())
-app.set('view engine','handlebars')
+app.engine('handlebars', exphbs.engine())
+app.set('view engine', 'handlebars')
 
 //----------------------------------------
 
-app.post('/login', (req,res)=>{
+app.post('/login', (req, res) => {
     const email = req.body.email
     const senha = req.body.senha
 
@@ -33,20 +33,20 @@ app.post('/login', (req,res)=>{
 
 })
 
-app.get('/login',(req,res)=>{
-    res.render('login',{log})
+app.get('/login', (req, res) => {
+    res.render('login', { log })
 })
-app.get('/',(req,res)=>{
-    res.render('home', {log})
+app.get('/', (req, res) => {
+    res.render('home', { log })
 })
 
 //------------------------------------------
 
-conn.sync().then(()=>{
-    app.listen(PORT,hostname, ()=>{
+conn.sync().then(() => {
+    app.listen(PORT, hostname, () => {
         console.log(`Servidor rodando ${hostname}:${PORT}`)
     })
-}).catch((error)=>{
-    console.error('Falha de conexão'+error)
+}).catch((error) => {
+    console.error('Falha de conexão' + error)
 })
 
